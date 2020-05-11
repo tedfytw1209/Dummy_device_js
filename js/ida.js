@@ -7,7 +7,8 @@
             Temperature_O1,Temperature_O2,Temperature_O3,Temperature_O4,Temperature_O5,Temperature_O6,Temperature_O7,Temperature_O8,Temperature_O9,
             CO2range_O,Humidityrange_O1,Humidityrange_O2,Humidityrange_O3,Humidityrange_O4,Humidityrange_O5,Humidityrange_O6,Humidityrange_O7,Humidityrange_O8,Humidityrange_O9,
             Temperaturerange_O1,Temperaturerange_O2,Temperaturerange_O3,Temperaturerange_O4,Temperaturerange_O5,Temperaturerange_O6,Temperaturerange_O7,Temperaturerange_O8,Temperaturerange_O9,
-            Sunshine_O1,Usewater_O1,Usewaterdelta_O1,Powergenerate_O1,LLSLux_O1,LLSLux_O2,LLSLux_O3,LLSLux_O4,LLSLux_O5,PF_O1],
+            Sunshine_O1,Usewater_O1,Usewaterdelta_O1,Powergenerate_O1,Lux_O1,Lux_O2,Lux_O3,Lux_O4,Lux_O5,PF_O1,
+            WaterLevel_O1,WaterLevel_O2,KWh_O],
 		        'd_name': 'DataServer_range02',
         };
 		
@@ -101,20 +102,24 @@
            $('.Usewaterdelta_O1')[0].innerText=data[0];}
         function Powergenerate_O1(data){
            $('.Powergenerate_O1')[0].innerText=data[0];}
-        function LLSLux_O1(data){
-           $('.LLSLux_O1')[0].innerText=data[0];}
-        function LLSLux_O2(data){
-           $('.LLSLux_O2')[0].innerText=data[0];}
-        function LLSLux_O3(data){
-           $('.LLSLux_O3')[0].innerText=data[0];}
-        function LLSLux_O4(data){
-           $('.LLSLux_O4')[0].innerText=data[0];}
-        function LLSLux_O5(data){
-           $('.LLSLux_O5')[0].innerText=data[0];}
+        function Lux_O1(data){
+           $('.Lux_O1')[0].innerText=data[0];}
+        function Lux_O2(data){
+           $('.Lux_O2')[0].innerText=data[0];}
+        function Lux_O3(data){
+           $('.Lux_O3')[0].innerText=data[0];}
+        function Lux_O4(data){
+           $('.Lux_O4')[0].innerText=data[0];}
+        function Lux_O5(data){
+           $('.Lux_O5')[0].innerText=data[0];}
         function PF_O1(data){
            $('.PF_O1')[0].innerText=data[0];}
-        
-        
+        function WaterLevel_O1(data){
+           $('.WaterLevel_O1')[0].innerText=data[0];}
+        function WaterLevel_O2(data){
+           $('.WaterLevel_O2')[0].innerText=data[0];}
+        function KWh_O(data){
+           $('.KWh_O')[0].innerText=data[0];}
 
 /*******************************************************************/                
         function ida_init(){
