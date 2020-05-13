@@ -8,10 +8,16 @@
             CO2range_O,Humidityrange_O1,Humidityrange_O2,Humidityrange_O3,Humidityrange_O4,Humidityrange_O5,Humidityrange_O6,Humidityrange_O7,Humidityrange_O8,Humidityrange_O9,
             Temperaturerange_O1,Temperaturerange_O2,Temperaturerange_O3,Temperaturerange_O4,Temperaturerange_O5,Temperaturerange_O6,Temperaturerange_O7,Temperaturerange_O8,Temperaturerange_O9,
             Sunshine_O1,Usewater_O1,Usewaterdelta_O1,Powergenerate_O1,Lux_O1,Lux_O2,Lux_O3,Lux_O4,Lux_O5,PF_O1,
-            WaterLevel_O1,WaterLevel_O2,KWh_O],
+            WaterLevel_O1,WaterLevel_O2],
 		        'd_name': 'DataServer_range02',
         };
-		
+		function number_format(val, decimals){
+            //Parse the value as a float value
+            val = parseFloat(val);
+            //Format the value w/ the specified number
+            //of decimal places and return it.
+            return val.toFixed(decimals);
+        }
         function CO2_O(data){
            $('.CO2_O')[0].innerText=data[0];
             //console.log('data:', data[0]);
@@ -97,9 +103,9 @@
         function Sunshine_O1(data){
            $('.Sunshine_O1')[0].innerText=data[0];}
         function Usewater_O1(data){
-           $('.Usewater_O1')[0].innerText=data[0];}
+           $('.Usewater_O1')[0].innerText=number_format(data[0],1);}
         function Usewaterdelta_O1(data){
-           $('.Usewaterdelta_O1')[0].innerText=data[0];}
+           $('.Usewaterdelta_O1')[0].innerText=number_format(data[0],1);}
         function Powergenerate_O1(data){
            $('.Powergenerate_O1')[0].innerText=data[0];}
         function Lux_O1(data){
@@ -115,11 +121,9 @@
         function PF_O1(data){
            $('.PF_O1')[0].innerText=data[0];}
         function WaterLevel_O1(data){
-           $('.WaterLevel_O1')[0].innerText=data[0];}
+           $('.WaterLevel_O1')[0].innerText=number_format(data[0],1);}
         function WaterLevel_O2(data){
-           $('.WaterLevel_O2')[0].innerText=data[0];}
-        function KWh_O(data){
-           $('.KWh_O')[0].innerText=data[0];}
+           $('.WaterLevel_O2')[0].innerText=number_format(data[0],1);}
 
 /*******************************************************************/                
         function ida_init(){
