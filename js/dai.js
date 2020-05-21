@@ -74,6 +74,7 @@ const dai = function (profile, ida) {
         console.log('register:', result);
         document.title = profile.d_name;
         ida.ida_init();
+        
     }
 
     function deregisterCallback (result) {
@@ -83,7 +84,11 @@ const dai = function (profile, ida) {
     function deregister () {
         //dan.deregister(deregisterCallback);
     }
-
+    function firstload() {
+        console.log('First load ,pull');
+        dan.pull_ctl();
+    }
+    window.onload = firstload;
     window.onunload = deregister;
     window.onbeforeunload = deregister;
     window.onclose = deregister;

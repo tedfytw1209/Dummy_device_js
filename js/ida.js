@@ -119,7 +119,7 @@
         function Lux_O5(data){
            $('.Lux_O5')[0].innerText=data[0];}
         function PF_O1(data){
-           $('.PF_O1')[0].innerText=data[0];}
+           $('.PF_O1')[0].innerText=number_format(data[0],2);}
         function WaterLevel_O1(data){
            $('.WaterLevel_O1')[0].innerText=number_format(data[0],1);}
         function WaterLevel_O2(data){

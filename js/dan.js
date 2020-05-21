@@ -96,6 +96,7 @@ var dan = (function () {
     }
 
     function pull_odf (index) {
+        
 		if (!_registered) {
             return;
         }
@@ -194,7 +195,7 @@ var dan = (function () {
         _registered = false;
         csmapi.deregister(_mac_addr, callback);
     }
-
+    
     return {
         'init': init,
         'register': register,
