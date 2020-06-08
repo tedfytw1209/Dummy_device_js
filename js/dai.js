@@ -9,7 +9,7 @@ const dai = function (profile, ida) {
                 .toString(16)
                 .substring(1);
         }*/
-        return 'DataServer_range02' + 'DataServer_range02';
+        return 'DataServer_range03' + 'DataServer_range03';
     })();
 
     if (profile.is_sim == undefined)   profile.is_sim = false;

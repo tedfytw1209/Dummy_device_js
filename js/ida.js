@@ -9,7 +9,7 @@
             Temperaturerange_O1,Temperaturerange_O2,Temperaturerange_O3,Temperaturerange_O4,Temperaturerange_O5,Temperaturerange_O6,Temperaturerange_O7,Temperaturerange_O8,Temperaturerange_O9,
             Sunshine_O1,Usewater_O1,Usewaterdelta_O1,Powergenerate_O1,Lux_O1,Lux_O2,Lux_O3,Lux_O4,Lux_O5,PF_O1,
             WaterLevel_O1,WaterLevel_O2],
-		        'd_name': 'DataServer_range02',
+		        'd_name': 'DataServer_range03',
         };
 		function number_format(val, decimals){
             //Parse the value as a float value
