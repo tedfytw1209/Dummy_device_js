@@ -152,19 +152,19 @@
            $('.Powergenerate_O1')[0].innerText=data[0];}}
         function Lux_O1(data){
             if ($('.Lux_O1')[0]){
-           $('.Lux_O1')[0].innerText=data[0];}}
+           $('.Lux_O1')[0].innerText=number_format(data[0],0);}}
         function Lux_O2(data){
             if ($('.Lux_O2')[0]){
-           $('.Lux_O2')[0].innerText=data[0];}}
+           $('.Lux_O2')[0].innerText=number_format(data[0],0);}}
         function Lux_O3(data){
             if ($('.Lux_O3')[0]){
-           $('.Lux_O3')[0].innerText=data[0];}}
+           $('.Lux_O3')[0].innerText=number_format(data[0],0);}}
         function Lux_O4(data){
             if ($('.Lux_O4')[0]){
-           $('.Lux_O4')[0].innerText=data[0];}}
+           $('.Lux_O4')[0].innerText=number_format(data[0],0);}}
         function Lux_O5(data){
             if ($('.Lux_O5')[0]){
-           $('.Lux_O5')[0].innerText=data[0];}}
+           $('.Lux_O5')[0].innerText=number_format(data[0],0);}}
         function PF_O1(data){
             if ($('.PF_O1')[0]){
             $('.PF_O1')[0].innerText=number_format(data[0],2);}}
