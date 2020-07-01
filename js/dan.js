@@ -1,7 +1,7 @@
 var dan = (function () {
     var RETRY_COUNT = 3;
     var RETRY_INTERVAL = 2000;
-    var POLLING_INTERVAL = 500;
+    var POLLING_INTERVAL = 200;
     var _pull;
     var _push;
     var _mac_addr = '';
@@ -36,7 +36,25 @@ var dan = (function () {
                  
         _profile = profile;
         csmapi.set_endpoint(endpoint);
-
+        // first pull
+        _registered = true;
+        _password = '';
+		_idf_list = profile['idf_list'].slice();
+		_odf_list = profile['odf_list'].slice();
+		_df_list = profile['df_list'].slice();
+        for (var i = 0; i < _df_list.length; i++) {
+            _df_selected[_df_list[i]] = true;
+		}
+        for (var i = 0; i < _odf_list.length; i++) {
+            _odf_timestamp[_odf_list[i]] = '';
+        }
+        _ctl_timestamp = '';
+        _suspended = false;					
+        for (var i = 0;i < _odf_list.length;i++){
+            pull_odf(i);
+        }
+        _registered = false;
+        //register
         var retry_count = 0;
         function register_callback (result, d_name, password = '') {
             if (result) {
@@ -48,7 +66,7 @@ var dan = (function () {
 		    _odf_list = profile['odf_list'].slice();
 		    _df_list = profile['df_list'].slice();
                     			
-
+                    
                     for (var i = 0; i < _df_list.length; i++) {
                         _df_selected[_df_list[i]] = true;
 					}
